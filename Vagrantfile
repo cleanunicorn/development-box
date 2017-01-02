@@ -18,9 +18,6 @@ Vagrant.configure("2") do |config|
   # Share the default directory
   config.vm.synced_folder '.', '/vagrant'
 
-  # Share your ssh keys
-  config.vm.synced_folder "~/.ssh", "/home/ubuntu/.ssh"
-
   config.vm.provider "virtualbox" do |vb|
     host = RbConfig::CONFIG['host_os']
 
